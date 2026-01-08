@@ -17,7 +17,14 @@ app.use(express.json());
 // Credentials:true => SERVER allow a browser to include cookies on request
 app.use(cors({origin:ENV.CLIENT_URL, credentials:true})) // for production
 
-app.use("/api/inngest", serve({client:inngest} , functions));
+app.use(
+  "/api/inngest",
+  serve({
+    client: inngest,
+    functions,
+  })
+);
+
 
 
 app.get("/", (req, res) => {
