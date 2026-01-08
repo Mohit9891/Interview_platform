@@ -24,11 +24,6 @@ app.use(
     functions,
   })
 );
-app.get("/api/test", (req, res) => {
-  res.send("API TEST WORKING");
-});
-
-
 
 
 app.get("/", (req, res) => {
